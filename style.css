@@ -1,0 +1,58 @@
+/*
+    Template:       mantis
+    Theme Name:     Mantis Child
+    Theme URI:      http://themeforest.net/user/LA-Studio/portfolio?ref=LA-Studio
+    Author:         LA Studio
+    Author URI:     http://themeforest.net/user/LA-Studio?ref=LA-Studio
+    Description:    Mantis - Minimal & Modern WooCommerce Theme
+    Version:        1.0
+    Tags:           one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, translation-ready
+    License: 		    GNU General Public License
+	  License URI: 	  licence/GPL.txt
+    Text Domain:    mantis-child
+    Domain Path:    /languages/
+*/
+#masthead {
+    box-shadow: 0px 1px 3px 0px #ddd;
+    border-top: 1em solid #086634;
+}
+.sidebar-inner ul.menu li {
+    margin-bottom: 0;
+}
+.current-cat-parent > .narrow {
+    display: none;
+}
+.current-cat-parent > a,
+.current-cat > a{
+    color: #126E3C;
+    font-weight: bold;
+}
+.products-list .product_item .product_item--info .add_to_cart_button {
+    border: 1px solid #ddd;    
+}
+.la-slick-nav button {
+    background-color: inherit !important
+}
+button {
+    background-color: #086634 !important
+}
+button.search-button {
+    background-color: inherit !important;
+}
+
+.entry-summary .wrap-cart-cta .quantity {
+    background-color: white;
+    border: 1px solid #ddd;
+    color: black;
+}
+.entry-summary .wrap-cart-cta .quantity span {
+    padding-top: 10px;
+    display: block;
+}
+.entry-summary .wrap-cart-cta .quantity:after {
+    content: none;
+}
+
+.cat-item.cat-item-15 {
+  display: none;
+}
