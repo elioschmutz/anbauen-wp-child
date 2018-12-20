@@ -30,3 +30,30 @@ function extend_mimetypes($mime_types){
     return $mime_types;
 }
 add_filter('upload_mimes', 'extend_mimetypes', 1, 1);
+
+function delivery_time() {
+  echo '<tr><th>' . esc_html__( 'Delivery time', 'mantis-child' ) . '</th><td>3-5 ' . esc_html__( 'days', 'mantis-child' )  . '</td></tr>';
+}
+add_action( 'woocommerce_review_order_before_submit', 'add_checkout_privacy_policy', 9 );
+
+function add_checkout_privacy_policy() {
+
+    woocommerce_form_field( 'newsletter', array(
+        'type'          => 'checkbox',
+        'class'         => array('form-row newsletter'),
+        'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
+        'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
+        'required'      => false,
+        'label'         => __('I want to subscribe to the newsletter', 'mantis-child'),
+    ));
+}
+
+add_action( 'woocommerce_cart_totals_after_shipping', 'delivery_time', 90);
+add_action( 'woocommerce_review_order_after_shipping', 'delivery_time', 90);
+
+add_filter( 'woocommerce_billing_fields', 'wc_npr_filter_phone', 10, 1 );
+
+function wc_npr_filter_phone( $address_fields ) {
+    $address_fields['billing_phone']['required'] = false;
+    return $address_fields;
+}

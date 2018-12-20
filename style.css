@@ -28,7 +28,7 @@
     font-weight: bold;
 }
 .products-list .product_item .product_item--info .add_to_cart_button {
-    border: 1px solid #ddd;    
+    border: 1px solid #ddd;
 }
 .la-slick-nav button {
     background-color: inherit !important
@@ -53,6 +53,14 @@ button.search-button {
     content: none;
 }
 
+body .entry-summary .quantity .qty-minus,
+body .entry-summary .quantity .qty-plus {
+    display: block;
+    top: 10px;
+}
+.woocommerce-shipping-methods input {
+    margin-right: 1em;
+}
 .cat-item.cat-item-15 {
   display: none;
 }
