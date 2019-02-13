@@ -62,5 +62,15 @@ body .entry-summary .quantity .qty-plus {
     margin-right: 1em;
 }
 .cat-item.cat-item-15 {
-  display: none;
+  display: none !important;
+}
+#sidebar_primary {
+ display: none;
+}
+@media only screen and (min-width: 992px) {
+  .btn-advanced-shop-filter {
+    display: none;
+  }
+  #sidebar_primary {
+    display: block;
 }

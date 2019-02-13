@@ -31,6 +31,21 @@ function extend_mimetypes($mime_types){
 }
 add_filter('upload_mimes', 'extend_mimetypes', 1, 1);
 
+function hook_javascript() {
+    ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118293806-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-118293806-2');
+       </script>
+    <?php
+}
+add_action('wp_head', 'hook_javascript');
+
 function delivery_time() {
   echo '<tr><th>' . esc_html__( 'Delivery time', 'mantis-child' ) . '</th><td>3-5 ' . esc_html__( 'days', 'mantis-child' )  . '</td></tr>';
 }
