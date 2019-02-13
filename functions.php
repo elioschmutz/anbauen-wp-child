@@ -47,7 +47,7 @@ function hook_javascript() {
 add_action('wp_head', 'hook_javascript');
 
 function delivery_time() {
-  echo '<tr><th>' . esc_html__( 'Delivery time', 'mantis-child' ) . '</th><td>3-5 ' . esc_html__( 'days', 'mantis-child' )  . '</td></tr>';
+  echo '<tr><th>' . esc_html__( 'Delivery time', 'mantis-child' ) . '</th><td>10-15 ' . esc_html__( 'days', 'mantis-child' )  . '</td></tr>';
 }
 add_action( 'woocommerce_review_order_before_submit', 'add_checkout_privacy_policy', 9 );
 
